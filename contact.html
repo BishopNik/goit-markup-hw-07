@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
@@ -51,7 +52,17 @@
       </div>
     </header>
     <main>
-      <button class="socset" type="button">Переход в соцсеть</button>
+      <ul class="list">
+        <li>
+          <a class="link active" href="./index.html">Studio</a>
+        </li>
+        <li>
+          <a class="link active" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li>
+          <a class="link nav-item active" href="./contact.html">Contacts</a>
+        </li>
+      </ul>
     </main>
     <footer class="container-footer footer">
       <!--Подвал -->
@@ -95,6 +106,18 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="subscribe-block">
+          <p class="subscribe-text">Subscribe</p>
+          <div class="subscribe-block-input">
+            <input type="text" class="subscribe-input" placeholder="E-mail" />
+            <button type="submit" class="button-subscribe">
+              <p class="button-subscribe-text">Subscribe</p>
+              <svg class="button-subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>
