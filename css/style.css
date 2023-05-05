@@ -22,6 +22,7 @@ body {
   background-color: var(--color-white);
   color: #434455;
   font-family: var(--main-font);
+  letter-spacing: 0.02em;
   min-width: 320px;
 }
 
@@ -74,16 +75,10 @@ a {
 }
 
 .list {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .link {
@@ -103,7 +98,7 @@ a {
 
 .section {
   min-width: 320px;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 /* Header */
@@ -188,17 +183,20 @@ a {
 /* Фильтр работ */
 
 .container-butts {
-  padding: 96px 0 120px 0;
+  padding: 48px 0;
 }
 
-.butts,
+.butts {
+  margin-bottom: 48px;
+}
+
 .service-h,
 .team-h {
   margin-bottom: 72px;
 }
 
 .butts-punkt {
-  padding: 12px 24px;
+  padding: 8px 16px;
   border: 1px solid var(--color-butt);
   border-radius: 4px;
   color: var(--butt-color);
@@ -221,6 +219,13 @@ a {
   border: 1px solid transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.list.butts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 270px;
 }
 
 /* Наше преимущество / Перечень работ / Услуги */
@@ -247,7 +252,8 @@ a {
 }
 
 .container-tech-section {
-  flex-basis: calc((100% - 72px) / 4);
+  width: 100%;
+  /* flex-basis: calc((100% - 72px) / 4); */
 }
 
 .tech-icon-box {
@@ -312,7 +318,6 @@ a {
   }
 }
 
-.tech-h,
 .team-name,
 .card-name {
   margin-top: 0;
@@ -321,6 +326,16 @@ a {
   font-size: 20px;
   line-height: 1.2;
   color: var(--text-color);
+}
+
+.tech-h {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+}
+
+.tech-h {
+  text-align: center;
 }
 
 .card-name {
@@ -334,7 +349,12 @@ a {
   margin-bottom: 0;
   font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.02em;
   color: var(--color-main-font);
+}
+
+.container-tech-section:not(:last-child) {
+  margin-bottom: 72px;
 }
 
 .container-tech.tech-p {
@@ -389,19 +409,19 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 188px 0;
+  padding: 112px 54px 240px 54px;
   max-width: 1440px;
-  height: 600px;
+  height: 432px;
   margin: 0 auto;
 }
 
 .banner-h {
-  margin: 0 auto 48px auto;
+  width: 320px;
+  margin: 0 auto 72px auto;
   max-width: 500px;
-  height: 120px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
   color: var(--color-white);
   letter-spacing: 0.02em;
@@ -439,6 +459,21 @@ a {
 
 .container-team {
   margin: 0 auto;
+}
+
+.container-team > .list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 72px;
+}
+
+.customers > .list {
+  display: flex;
+  row-gap: 72px;
+  column-gap: 16px;
 }
 
 .team .team-li {
@@ -479,7 +514,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 168px;
+  width: 190px;
   height: 88px;
   border: 1px solid var(--color-icon-customs);
   color: var(--color-icon-customs);
