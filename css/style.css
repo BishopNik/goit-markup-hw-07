@@ -92,7 +92,6 @@ a {
 
 .container {
   min-width: 320px;
-  margin: 0 auto;
   padding: 0 16px;
 }
 
@@ -375,7 +374,6 @@ a {
   font-size: 36px;
   line-height: 1.1;
   text-align: center;
-  text-transform: capitalize;
   color: var(--text-color);
 }
 
@@ -422,7 +420,6 @@ a {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  text-align: center;
   color: var(--color-white);
   letter-spacing: 0.02em;
 }
@@ -464,9 +461,7 @@ a {
 .container-team > .list {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
   gap: 72px;
 }
 
@@ -656,7 +651,6 @@ a {
 
 .icon-social {
   display: block;
-  margin: auto;
   fill: var(--color-sec-font);
 }
 
@@ -697,7 +691,6 @@ a {
 }
 
 .button-subscribe-text {
-  align-items: center;
   margin-right: 16px;
   color: var(--color-white);
   font-weight: 500;
