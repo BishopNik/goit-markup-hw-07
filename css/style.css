@@ -22,7 +22,7 @@ body {
   background-color: var(--color-white);
   color: #434455;
   font-family: var(--main-font);
-  /* letter-spacing: 0.02em; */
+  min-width: 320px;
 }
 
 h1,
@@ -75,12 +75,15 @@ a {
 
 .list {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   justify-content: center;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .link {
@@ -93,12 +96,13 @@ a {
 }
 
 .container {
-  width: 1158px;
+  min-width: 320px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 .section {
+  min-width: 320px;
   padding: 120px 0;
 }
 
@@ -124,6 +128,10 @@ a {
   align-items: center;
 }
 
+.container-nav > .logo {
+  padding: 24px 0;
+}
+
 .nav-item {
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -136,9 +144,10 @@ a {
 }
 
 .nav-menu {
-  display: flex;
+  display: none;
   gap: 40px;
   padding: 24px 0;
+  margin-left: 76px;
 }
 
 .nav-item:hover,
@@ -430,7 +439,6 @@ a {
 
 .container-team {
   margin: 0 auto;
-  width: 1158px;
 }
 
 .team .team-li {
@@ -462,6 +470,7 @@ a {
 
 .ul-customers {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -498,6 +507,7 @@ a {
 /* Логотип */
 
 .logo {
+  display: inline-block;
   font-family: var(--sec-font);
   font-weight: 800;
   font-size: 18px;
@@ -505,8 +515,6 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--butt-color);
-  display: flex;
-  margin-right: 76px;
 }
 
 .studio {
@@ -530,8 +538,9 @@ a {
 /* Подвал */
 
 .container-footer {
+  min-width: 320px;
   margin: 0;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .container-footer .logo {
@@ -543,15 +552,21 @@ a {
 }
 
 .logotip {
-  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 72px;
 }
 
 .social-items {
-  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 72px;
 }
 
 .social-text {
-  display: flex;
+  display: inline-block;
   color: var(--color-white);
   font-weight: 500;
   font-size: 16px;
@@ -605,9 +620,78 @@ a {
 }
 
 .icon-social {
+  display: block;
   margin: auto;
   fill: var(--color-sec-font);
 }
+
+/* Подписка */
+
+.subscribe-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.subscribe-block-input {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subscribe-block-input input::placeholder {
+  color: var(--color-white);
+}
+
+.button-subscribe {
+  display: inline-flex;
+  padding: 8px 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--butt-color);
+  color: var(--color-white);
+}
+
+.button-subscribe:hover {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--butt-color-hover);
+}
+
+.button-subscribe-text {
+  align-items: center;
+  margin-right: 16px;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.button-subscribe-icon {
+  fill: currentColor;
+}
+
+.subscribe-input {
+  box-sizing: border-box;
+  padding-left: 16px;
+  width: 100%;
+  max-width: 398px;
+  height: 40px;
+  background-color: var(--text-color);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  outline: transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+/* Модальное окно */
 
 .backdrop {
   box-sizing: border-box;
@@ -673,70 +757,6 @@ a {
 .modal-close:hover .icon-modal {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #fff;
-}
-
-.subscribe-text {
-  margin-bottom: 16px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--color-white);
-}
-
-.subscribe-block-input {
-  display: flex;
-  align-items: center;
-}
-
-.subscribe-block-input input::placeholder {
-  color: var(--color-white);
-}
-
-.button-subscribe {
-  display: inline-flex;
-  padding: 8px 24px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: var(--butt-color);
-  color: var(--color-white);
-}
-
-.button-subscribe:hover {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: var(--butt-color-hover);
-}
-
-.button-subscribe-text {
-  align-items: center;
-  margin-right: 16px;
-  color: var(--color-white);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-.button-subscribe-icon {
-  fill: currentColor;
-}
-
-.subscribe-input {
-  box-sizing: border-box;
-  margin-right: 24px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 16px;
-  width: 264px;
-  height: 40px;
-  background-color: var(--text-color);
-  color: var(--color-white);
-  border: 1px solid var(--color-white);
-  outline: transparent;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
 }
 
 .modal-nametext {
@@ -892,15 +912,22 @@ a {
   background-color: var(--butt-color-hover);
 }
 
+/* Медиаправила */
+
 @media screen and (min-width: 480px) {
-  .container {
-    width: 428px;
-  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+
+  .list {
+    gap: 24px;
+  }
+
+  .nav-menu {
+    display: flex;
   }
 
   .container-project {
@@ -924,6 +951,7 @@ a {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
+    padding: 0 15px;
   }
 
   .service {
@@ -940,6 +968,10 @@ a {
 
   .card {
     width: calc((100% - 48px) / 3);
+  }
+
+  .container-footer {
+    padding: 100px 0;
   }
 
   .footer .container {
