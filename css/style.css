@@ -92,6 +92,7 @@ a {
 
 .container {
   min-width: 320px;
+  margin: 0 auto;
   padding: 0 16px;
 }
 
@@ -467,6 +468,7 @@ a {
 
 .customers > .list {
   display: flex;
+  justify-content: center;
   row-gap: 72px;
   column-gap: 16px;
 }
@@ -974,12 +976,34 @@ a {
   .card:not(:last-child) {
     margin-bottom: 0;
   }
+
+  .butts-punkt {
+    padding: 12px 24px;
+  }
+
+  .butts {
+    margin-bottom: 72px;
+  }
+
+  .list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .list.butts {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
     padding: 0 15px;
+  }
+
+  .container > .list {
+    display: flex;
   }
 
   .service {
@@ -1000,6 +1024,10 @@ a {
 
   .container-footer {
     padding: 100px 0;
+  }
+
+  .icon-box {
+    width: 168px;
   }
 
   .footer .container {
