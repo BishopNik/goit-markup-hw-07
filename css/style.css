@@ -76,6 +76,7 @@ a {
 
 .list {
   list-style: none;
+  text-align: center;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
@@ -252,7 +253,8 @@ a {
 }
 
 .container-tech-section {
-  width: 100%;
+  display: inline-block;
+  width: 396px;
   /* flex-basis: calc((100% - 72px) / 4); */
 }
 
@@ -351,6 +353,7 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-main-font);
+  text-align: start;
 }
 
 .container-tech-section:not(:last-child) {
@@ -952,10 +955,6 @@ a {
     width: 768px;
   }
 
-  .list {
-    gap: 24px;
-  }
-
   .nav-menu {
     display: flex;
   }
@@ -966,6 +965,31 @@ a {
     column-gap: 24px;
     row-gap: 72px;
     justify-content: flex-start;
+  }
+
+  .banner-h {
+    font-size: 56px;
+  }
+
+  .tech-h {
+    text-align: start;
+  }
+
+  .tech-p {
+    width: 356px;
+  }
+
+  .container-tech-section {
+    width: 356px;
+  }
+
+  .container-tech-section:not(:last-child) {
+    margin-bottom: 0px;
+  }
+
+  .container > .list {
+    row-gap: 72px;
+    column-gap: 24px;
   }
 
   .card {
@@ -987,12 +1011,34 @@ a {
 
   .list {
     display: flex;
-    gap: 24px;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .list.butts {
     width: 100%;
+  }
+
+  .logotip {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 72px;
+    margin-right: 24px;
+  }
+
+  .social-items {
+    display: inline-flex;
+    align-items: flex-start;
+    margin-bottom: 72px;
+  }
+
+  .subscribe-text {
+    text-align: start;
+  }
+
+  .subscribe-block-input {
+    flex-direction: row;
   }
 }
 
