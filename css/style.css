@@ -76,10 +76,10 @@ a {
 
 .list {
   list-style: none;
-  text-align: center;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+  text-align: center;
 }
 
 .link {
@@ -94,7 +94,7 @@ a {
 .container {
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 16px;
+  /* padding: 0 16px; */
 }
 
 .section {
@@ -117,6 +117,7 @@ a {
   align-items: center;
   margin-bottom: 0;
   margin-top: 0;
+  margin-left: 16px;
 }
 
 .container-nav {
@@ -223,7 +224,7 @@ a {
 }
 
 .list.butts {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   gap: 24px;
   width: 270px;
@@ -240,8 +241,14 @@ a {
   display: block;
 }
 
+.container-project.list {
+  text-align: start;
+}
+
 .card {
-  width: 100%;
+  max-width: 396px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card:not(:last-child) {
@@ -254,7 +261,7 @@ a {
 
 .container-tech-section {
   display: inline-block;
-  width: 396px;
+  max-width: 396px;
   /* flex-basis: calc((100% - 72px) / 4); */
 }
 
@@ -411,10 +418,11 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 112px 54px 240px 54px;
   max-width: 1440px;
   height: 432px;
   margin: 0 auto;
+  min-width: 320px;
+  padding: 112px 0;
 }
 
 .banner-h {
@@ -459,14 +467,16 @@ a {
 }
 
 .container-team {
-  margin: 0 auto;
+  text-align: center;
 }
 
 .container-team > .list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 72px;
+  margin: 0 auto;
+  max-width: 264px;
+}
+
+.list > .team-li:not(:last-child) {
+  margin-bottom: 72px;
 }
 
 .customers > .list {
@@ -474,6 +484,9 @@ a {
   justify-content: center;
   row-gap: 72px;
   column-gap: 16px;
+  max-width: 428px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team .team-li {
@@ -947,7 +960,16 @@ a {
 
 /* Медиаправила */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
+  .container {
+  }
+
+  .banner {
+  }
+
+  .list.butts {
+    margin-left: calc((100% - 396px) / 2);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -957,6 +979,18 @@ a {
 
   .nav-menu {
     display: flex;
+    margin-left: 120px;
+    padding: 0;
+  }
+
+  .address > .list.nav-menu {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .contact {
+    font-size: 12px;
+    line-height: 1.17;
   }
 
   .container-project {
@@ -968,7 +1002,9 @@ a {
   }
 
   .banner-h {
+    width: 496px;
     font-size: 56px;
+    line-height: 1.07;
   }
 
   .tech-h {
@@ -987,14 +1023,42 @@ a {
     margin-bottom: 0px;
   }
 
-  .container > .list {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container-team > .list {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+
+  .list.tech {
+    justify-content: center;
     row-gap: 72px;
     column-gap: 24px;
+  }
+
+  .list > .team-li:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .container-team > .list {
+    max-width: 552px;
+  }
+
+  .customers > .list {
+    max-width: 768px;
   }
 
   .card {
     display: flex;
     width: calc((100% - 24px) / 2);
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .card:not(:last-child) {
@@ -1009,36 +1073,40 @@ a {
     margin-bottom: 72px;
   }
 
-  .list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
   .list.butts {
     width: 100%;
+    justify-content: center;
+    margin-left: 0;
   }
 
   .logotip {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 72px;
     margin-right: 24px;
+    margin-left: 108px;
   }
 
   .social-items {
     display: inline-flex;
     align-items: flex-start;
-    margin-bottom: 72px;
+  }
+
+  .subscribe-input {
+    width: 264px;
   }
 
   .subscribe-text {
     text-align: start;
   }
 
+  .subscribe-block {
+    margin-left: 108px;
+  }
+
   .subscribe-block-input {
     flex-direction: row;
+    gap: 24px;
   }
 }
 
