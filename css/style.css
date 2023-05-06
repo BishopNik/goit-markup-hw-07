@@ -88,13 +88,11 @@ a {
 
 .address {
   font-style: normal;
-  margin-left: auto;
 }
 
 .container {
   min-width: 320px;
   margin: 0 auto;
-  /* padding: 0 16px; */
 }
 
 .section {
@@ -117,7 +115,8 @@ a {
   align-items: center;
   margin-bottom: 0;
   margin-top: 0;
-  margin-left: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-nav {
@@ -126,7 +125,9 @@ a {
 }
 
 .container-nav > .logo {
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 16px;
 }
 
 .nav-item {
@@ -144,7 +145,6 @@ a {
   display: none;
   gap: 40px;
   padding: 24px 0;
-  margin-left: 76px;
 }
 
 .nav-item:hover,
@@ -176,8 +176,8 @@ a {
 
 .contact {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--color-main-font);
 }
@@ -375,6 +375,10 @@ a {
 .tech-h {
   margin-bottom: 8px;
   margin-top: 0;
+}
+
+.tech-p {
+  padding: 0 16px;
 }
 
 .tech-t,
@@ -961,12 +965,16 @@ a {
 /* Медиаправила */
 
 @media screen and (min-width: 320px) {
-  .container {
+  .tech-p {
+    padding: 0;
   }
 
-  .banner {
+  .list.butts {
+    margin-left: 0;
   }
+}
 
+@media screen and (min-width: 396px) {
   .list.butts {
     margin-left: calc((100% - 396px) / 2);
   }
@@ -981,6 +989,10 @@ a {
     display: flex;
     margin-left: 120px;
     padding: 0;
+  }
+
+  .address .nav-menu {
+    margin-left: 122px;
   }
 
   .address > .list.nav-menu {
@@ -1012,7 +1024,8 @@ a {
   }
 
   .tech-p {
-    width: 356px;
+    width: 100%;
+    padding: 0;
   }
 
   .container-tech-section {
@@ -1111,6 +1124,10 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
+  .section {
+    padding: 120px 0;
+  }
+
   .container {
     width: 1158px;
     padding: 0 15px;
@@ -1118,6 +1135,38 @@ a {
 
   .container > .list {
     display: flex;
+  }
+
+  .address .nav-menu {
+    margin-left: 0;
+  }
+
+  .container-nav .nav-menu {
+    margin-left: 76px;
+  }
+
+  .address > .list.nav-menu {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .address {
+    margin-left: 322px;
+    margin-right: auto;
+  }
+
+  .contact {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .banner {
+    height: 600px;
+  }
+
+  .banner-h {
+    margin-top: 68px;
+    margin-bottom: 48px;
   }
 
   .service {
@@ -1132,8 +1181,24 @@ a {
     row-gap: 48px;
   }
 
+  .container-tech-section {
+    width: 264px;
+  }
+
+  .service .list {
+    gap: 24px;
+  }
+
+  .container-team > .list {
+    max-width: 1200px;
+  }
+
   .card {
     width: calc((100% - 48px) / 3);
+  }
+
+  .customers > .list {
+    max-width: 1200px;
   }
 
   .container-footer {
@@ -1142,6 +1207,19 @@ a {
 
   .icon-box {
     width: 168px;
+  }
+
+  .logotip {
+    margin-right: 120px;
+    margin-left: auto;
+  }
+
+  .subscribe-block {
+    margin-left: 80px;
+  }
+
+  .container-footer {
+    height: 312px;
   }
 
   .footer .container {
