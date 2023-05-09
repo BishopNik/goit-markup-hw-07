@@ -49,6 +49,7 @@ button {
 }
 
 ul,
+li,
 ol {
   list-style: none;
   margin: 0;
@@ -122,18 +123,14 @@ a {
 }
 
 .nav-item {
-  position: relative;
+  display: block;
+  text-align: start;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--text-color);
-  padding: 28px 0;
-}
-
-.nav-menu {
-  display: none;
 }
 
 .nav-item:hover,
@@ -147,18 +144,6 @@ a {
 .nav-item.active {
   position: relative;
   color: var(--butt-color-hover);
-}
-
-.nav-item.active::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--butt-color-hover);
 }
 
 /* Контакт */
@@ -949,70 +934,17 @@ a {
   background-color: var(--butt-color-hover);
 }
 
-/* Мобильное меню */
-
-.mobile-menu {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 16px;
-  margin-left: auto;
-  padding: 0;
-  background-color: var(--color-white);
-}
-
-.mobile-menu:hover .mobile-menu-icon,
-.mobile-menu:focus .mobile-menu-icon {
-  stroke: var(--butt-color-hover);
-  fill: var(--butt-color-hover);
-}
-
-.mobile-menu-close {
-  position: absolute;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  right: 24px;
-  top: 24px;
-  padding: 0;
-  width: 24px;
-  height: 24px;
-  border: 1px solid #2e2f421a;
-  border-radius: 50%;
-  background-color: var(--color-white);
-}
-
-.mobile-menu-icon {
-  stroke: var(--text-color);
-  fill: var(--text-color);
-}
-.mobile-menu-window {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 80px 35px 40px 40px;
-  background-color: var(--color-white);
-  z-index: 999;
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
-}
-
-.mobile-menu-window.is-open {
-  transform: translateX(0);
-}
-
-.mobile-menu-window.is-open .social-link-contact {
-  display: inline-flex;
-  column-gap: 56px;
-}
-
 .social-link-contact {
   display: none;
 }
 
 /* Медиаправила */
+
+@media screen and (max-width: 428px) {
+  .mobile-menu-window.is-open .social-link-contact {
+    column-gap: calc(100vw * 0.13);
+  }
+}
 
 @media screen and (min-width: 320px) {
   .tech-p {
@@ -1040,10 +972,143 @@ a {
   }
 }
 
+@media screen and (max-width: 767px) {
+  /* Мобильное меню */
+
+  .mobile-menu {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: auto;
+    padding: 0;
+    background-color: var(--color-white);
+  }
+
+  .mobile-menu:hover .mobile-menu-icon,
+  .mobile-menu:focus .mobile-menu-icon {
+    stroke: var(--butt-color-hover);
+    fill: var(--butt-color-hover);
+  }
+
+  .mobile-menu-close {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    right: 24px;
+    top: 24px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #2e2f421a;
+    border-radius: 50%;
+    background-color: var(--color-white);
+  }
+
+  .mobile-menu-icon {
+    stroke: var(--text-color);
+    fill: var(--text-color);
+  }
+
+  .mobile-menu-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 320px;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 35px 40px 40px;
+    background-color: var(--color-white);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .mobile-menu-window.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-window.is-open .social-link-contact {
+    display: inline-flex;
+    column-gap: 56px;
+  }
+
+  .nav-menu li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .link.contact {
+    display: block;
+    text-align: start;
+  }
+
+  .list.nav-menu:not(:last-child) {
+    margin-bottom: 284px;
+  }
+
+  .address .nav-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .nav-menu .email {
+    order: 2;
+  }
+
+  .nav-menu .tel {
+    order: 1;
+  }
+
+  .tel .link.contact {
+    color: var(--butt-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+  }
+
+  .email .link.contact {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .mobile-menu-window.is-open .nav-item {
+    color: var(--text-color);
+  }
+
+  .mobile-menu-window.is-open .nav-item[href='./contact.html'] {
+    color: var(--butt-color-hover);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
   }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .mobile-menu-window {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    padding: 0;
+    background-color: var(--color-white);
+  }
+
+  .nav-item {
+    padding: 24px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .mobile-menu-close,
   .mobile-menu {
     display: none;
   }
@@ -1058,7 +1123,8 @@ a {
   }
 
   .nav-menu {
-    display: flex;
+    display: inline-flex;
+    flex-wrap: nowrap;
     gap: 40px;
     padding: 24px 0;
     margin-left: 120px;
@@ -1068,6 +1134,18 @@ a {
   .modal {
     width: 408px;
     height: 586px;
+  }
+
+  .nav-item.active::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--butt-color-hover);
   }
 
   .address .nav-menu {
@@ -1082,6 +1160,7 @@ a {
   .contact {
     font-size: 12px;
     line-height: 1.17;
+    letter-spacing: 0.04em;
   }
 
   .container-project {
@@ -1113,10 +1192,6 @@ a {
 
   .container-tech-section:not(:last-child) {
     margin-bottom: 0px;
-  }
-
-  .list {
-    display: flex;
   }
 
   .container-team > .list {
@@ -1215,6 +1290,10 @@ a {
     display: flex;
   }
 
+  .nav-menu {
+    margin-left: 76px;
+  }
+
   .address .nav-menu {
     margin-left: 0;
   }
@@ -1238,13 +1317,14 @@ a {
   }
 
   .address {
-    margin-left: 332px;
+    margin-left: 331px;
     margin-right: auto;
   }
 
   .contact {
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 
   .banner {
