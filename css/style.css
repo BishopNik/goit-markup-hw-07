@@ -110,15 +110,6 @@ a {
 
 /* Навигация */
 
-.menu {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .container-nav {
   display: flex;
   align-items: center;
@@ -143,8 +134,6 @@ a {
 
 .nav-menu {
   display: none;
-  gap: 40px;
-  padding: 24px 0;
 }
 
 .nav-item:hover,
@@ -960,6 +949,8 @@ a {
   background-color: var(--butt-color-hover);
 }
 
+/* Мобильное меню */
+
 .mobile-menu {
   display: inline-flex;
   justify-content: center;
@@ -967,17 +958,58 @@ a {
   margin-right: 16px;
   margin-left: auto;
   padding: 0;
-  /* width: 24px;
+  background-color: var(--color-white);
+}
+
+.mobile-menu:hover .mobile-menu-icon,
+.mobile-menu:focus .mobile-menu-icon {
+  stroke: var(--butt-color-hover);
+  fill: var(--butt-color-hover);
+}
+
+.mobile-menu-close {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  right: 24px;
+  top: 24px;
+  padding: 0;
+  width: 24px;
   height: 24px;
   border: 1px solid #2e2f421a;
-  border-radius: 50%; */
+  border-radius: 50%;
   background-color: var(--color-white);
 }
 
 .mobile-menu-icon {
-  opacity: 1;
   stroke: var(--text-color);
   fill: var(--text-color);
+}
+.mobile-menu-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 35px 40px 40px;
+  background-color: var(--color-white);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.mobile-menu-window.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu-window.is-open .social-link-contact {
+  display: inline-flex;
+  column-gap: 56px;
+}
+
+.social-link-contact {
+  display: none;
 }
 
 /* Медиаправила */
@@ -1012,9 +1044,23 @@ a {
   .container {
     width: 768px;
   }
+  .mobile-menu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .nav-menu {
     display: flex;
+    gap: 40px;
+    padding: 24px 0;
     margin-left: 120px;
     padding: 0;
   }
@@ -1071,7 +1117,6 @@ a {
 
   .list {
     display: flex;
-    flex-wrap: wrap;
   }
 
   .container-team > .list {
@@ -1174,6 +1219,10 @@ a {
     margin-left: 0;
   }
 
+  .container-nav .logo {
+    padding-left: 0;
+  }
+
   .container-nav .nav-menu {
     margin-left: 76px;
   }
@@ -1189,7 +1238,7 @@ a {
   }
 
   .address {
-    margin-left: 322px;
+    margin-left: 332px;
     margin-right: auto;
   }
 
