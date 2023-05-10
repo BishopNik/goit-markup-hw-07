@@ -137,8 +137,8 @@ a {
 .nav-item:focus,
 .contact:hover,
 .contact:focus {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--butt-color-hover);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item.active {
@@ -778,7 +778,7 @@ a {
 .modal-close:hover .icon-modal,
 .modal-close:hover .icon-modal {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: #fff;
+  fill: var(--color-white);
 }
 
 .modal-nametext {
@@ -983,12 +983,13 @@ a {
     margin-left: auto;
     padding: 0;
     background-color: var(--color-white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .mobile-menu:hover .mobile-menu-icon,
   .mobile-menu:focus .mobile-menu-icon {
     stroke: var(--butt-color-hover);
-    fill: var(--butt-color-hover);
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .mobile-menu-close {
@@ -1004,11 +1005,20 @@ a {
     border: 1px solid #2e2f421a;
     border-radius: 50%;
     background-color: var(--color-white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-close:focus,
+  .mobile-menu-close:hover {
+    background-color: var(--butt-color-hover);
+    fill: var(--color-white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .mobile-menu-icon {
     stroke: var(--text-color);
-    fill: var(--text-color);
   }
 
   .mobile-menu-window {
@@ -1023,6 +1033,7 @@ a {
     z-index: 999;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
+    overflow-y: scroll;
   }
 
   .mobile-menu-window.is-open {
