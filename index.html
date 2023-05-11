@@ -114,7 +114,7 @@
               </svg>
             </button>
             <p class="modal-nametext">Leave your contacts and we will call you back</p>
-            <form action="" class="modal-form">
+            <form class="modal-form" method="post" autocomplete="on">
               <div class="modal-field">
                 <label class="modal-name-field" for="name">Name</label>
                 <input class="modal-type-field" type="text" name="name" placeholder=" " id="name" />
@@ -233,13 +233,40 @@
           <h2 class="service-h">What are we doing</h2>
           <ul class="list">
             <li class="service-simple">
-              <img src="./images/rectangle/img-3.jpg" alt="MAC" width="360" />
+              <img
+                srcset="
+                  ./images/rectangle/Rectangle1.jpg    1x,
+                  ./images/rectangle/Rectangle1@2x.jpg 2x
+                "
+                src="./images/rectangle/Rectangle1.jpg"
+                alt="MAC"
+                loading="lazy"
+                width="360"
+              />
             </li>
             <li class="service-simple">
-              <img src="./images/rectangle/img-2.jpg" alt="APP" width="360" />
+              <img
+                srcset="
+                  ./images/rectangle/Rectangle2.jpg    1x,
+                  ./images/rectangle/Rectangle2@2x.jpg 2x
+                "
+                src="./images/rectangle/Rectangle2.jpg"
+                alt="APP"
+                loading="lazy"
+                width="360"
+              />
             </li>
             <li class="service-simple">
-              <img src="./images/rectangle/img-1.jpg" alt="Phone" width="360" />
+              <img
+                srcset="
+                  ./images/rectangle/Rectangle3.jpg    1x,
+                  ./images/rectangle/Rectangle3@2x.jpg 2x
+                "
+                src="./images/rectangle/Rectangle3.jpg"
+                alt="Phone"
+                loading="lazy"
+                width="360"
+              />
             </li>
           </ul>
         </div>
@@ -250,7 +277,12 @@
           <h2 class="team-h">Our Team</h2>
           <ul class="list">
             <li class="team-li">
-              <img src="./images/team/team-1.jpg" alt="Mark Guerrero" width="264" />
+              <img
+                srcset="./images/team/mark.jpg 1x, ./images/team/mark@2x.jpg 2x"
+                src="./images/team/mark.jpg"
+                alt="Mark Guerrero"
+                width="264"
+              />
               <div class="team-person">
                 <h3 class="team-name">Mark Guerrero</h3>
                 <p class="team-p">Product Designer</p>
@@ -287,7 +319,12 @@
               </div>
             </li>
             <li class="team-li">
-              <img src="./images/team/team-2.jpg" alt="Tom Ford" width="264" />
+              <img
+                srcset="./images/team/tom.jpg 1x, ./images/team/tom@2x.jpg 2x"
+                src="./images/team/tom.jpg"
+                alt="Tom Ford"
+                width="264"
+              />
               <div class="team-person">
                 <h3 class="team-name">Tom Ford</h3>
                 <p class="team-p">Frontend Developer</p>
@@ -324,7 +361,12 @@
               </div>
             </li>
             <li class="team-li">
-              <img src="./images/team/team-3.jpg" alt="Camila Garcia" width="264" />
+              <img
+                srcset="./images/team/camila.jpg 1x, ./images/team/camila@2x.jpg 2x"
+                src="./images/team/camila.jpg"
+                alt="Camila Garcia"
+                width="264"
+              />
               <div class="team-person">
                 <h3 class="team-name">Camila Garcia</h3>
                 <p class="team-p">Marketing</p>
@@ -361,7 +403,12 @@
               </div>
             </li>
             <li class="team-li">
-              <img src="./images/team/team-4.jpg" alt="Daniel Wilson" width="264" />
+              <img
+                srcset="./images/team/daniel.jpg 1x, ./images/team/daniel@2x.jpg 2x"
+                src="./images/team/daniel.jpg"
+                alt="Daniel Wilson"
+                width="264"
+              />
               <div class="team-person">
                 <h3 class="team-name">Daniel Wilson</h3>
                 <p class="team-p">UI Designer</p>
