@@ -94,6 +94,7 @@ a {
 
 .container {
   min-width: 320px;
+  max-width: 428px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -454,8 +455,7 @@ a {
   display: flex;
   justify-content: center;
   row-gap: 72px;
-  column-gap: 24px;
-  max-width: 428px;
+  column-gap: 16px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1118,7 +1118,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 
   .list {
@@ -1267,7 +1267,7 @@ a {
   }
 
   .customers > .list {
-    max-width: 768px;
+    column-gap: 24px;
   }
 
   .card {
@@ -1333,15 +1333,11 @@ a {
 
 @media screen and (min-width: 1200px) {
   .section {
-    padding: 120px 0;
+    padding-bottom: 120px;
   }
 
   .container {
-    width: 1160px;
-  }
-
-  .container > .list {
-    column-gap: 24px;
+    max-width: 1160px;
   }
 
   .nav-menu {
@@ -1411,6 +1407,12 @@ a {
     display: flex;
   }
 
+  .tech-h {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
   .container-project {
     row-gap: 48px;
   }
@@ -1432,7 +1434,6 @@ a {
   }
 
   .customers > .list {
-    max-width: 1200px;
     padding: 0;
   }
 
