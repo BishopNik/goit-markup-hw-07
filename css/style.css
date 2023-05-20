@@ -1249,7 +1249,6 @@ a {
   }
 
   .list.tech {
-    justify-content: center;
     row-gap: 72px;
     column-gap: 24px;
   }
