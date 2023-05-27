@@ -1485,3 +1485,7 @@ a {
     margin-right: auto;
   }
 }
+
+.zero {
+  text-align: center;
+}
