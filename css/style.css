@@ -211,8 +211,9 @@ a {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.butts-punkt:hover,
-.butts-punkt:focus {
+/* .butts-punkt:hover, */
+/* .butts-punkt:focus, */
+.on-selected {
   color: var(--color-white);
   background-color: var(--butt-color-hover);
   border: 1px solid transparent;
