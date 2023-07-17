@@ -1,0 +1,65 @@
+export const projectItems = [
+    {
+        img: 'img-1.jpg',
+        img2x: 'img-1@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Banking App Interface Concept',
+        cardtype: 'App',
+    },
+    {
+        img: 'img-2.jpg',
+        img2x: 'img-2@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Cashless Payment',
+        cardtype: 'Marketing',
+    },
+    {
+        img: 'img-3.jpg',
+        img2x: 'img-3@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Meditation App',
+        cardtype: 'App',
+    },
+    {
+        img: 'img-4.jpg',
+        img2x: 'img-4@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Taxi Service',
+        cardtype: 'Marketing',
+    },
+    {
+        img: 'img-5.jpg',
+        img2x: 'img-5@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Screen Illustrations',
+        cardtype: 'Design',
+    },
+    {
+        img: 'img-6.jpg',
+        img2x: 'img-6@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Online Courses',
+        cardtype: 'Marketing',
+    },
+    {
+        img: 'img-7.jpg',
+        img2x: 'img-7@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Instagram Stories Concept',
+        cardtype: 'Design',
+    },
+    {
+        img: 'img-8.jpg',
+        img2x: 'img-8@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Organic Food',
+        cardtype: 'Web Site',
+    },
+    {
+        img: 'img-9.jpg',
+        img2x: 'img-9@2x.jpg',
+        aboutcard: '14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App',
+        cardname: 'Fresh Coffee',
+        cardtype: 'Web Site',
+    }
+]
